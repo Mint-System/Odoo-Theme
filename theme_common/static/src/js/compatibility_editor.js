@@ -3,11 +3,11 @@ odoo.define('theme_common.compatibility_editor', function (require) {
 
 var sOptions = require('web_editor.snippets.options');
 
-sOptions.registry.BackgroundImage.include({
+sOptions.registry.background.include({
     /**
      * @override
      */
-    background: function (previewMode, widgetValue, params) {
+    background: function (previewMode, value, $opt) {
         this._super.apply(this, arguments);
 
         var customClass = this.$target.attr('class').match(/\b(bg-img-\d+)\b/);
